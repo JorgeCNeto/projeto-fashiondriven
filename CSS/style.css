@@ -1,0 +1,83 @@
+body{
+    width: 1366px;
+    font-family: "roboto";
+
+}
+
+header{
+    background-color: #404EED;
+    width: 1366px;
+    height: 89px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding-left: 80px;
+}
+header .img{
+    height: 57px;
+}
+
+.conteudoPrincipal{
+    display: flex;
+    height: 785px;
+}
+
+.escolhasDasRoupas{
+    background-color: #E5E5E5;
+    height: 758px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: ;
+    align-items: center;
+}
+
+.escolhasDasRoupas div{
+    width: 398px;
+}
+
+.modelo{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    height: 70px;
+}
+
+p{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    color: #232323;
+}
+
+.ajusteImagem{
+    position: absolute;
+}
+
+.imagemComFundo{
+    width: 80px;
+    height: 80px;
+    position: relative;
+    left: 0;
+    top: 0;
+}
+.fundo{
+    color: #C4C4C4;
+    width: 100px;
+    height: 100px;
+    position: relative;
+    left: 0;
+    top: 0;
+}
+
+.opcoes{
+    display: flex;
+    
+}
+
+.decoracao{
+    background-color: #404EED;
+    height: 758px;
+    width: 50%;
+}
