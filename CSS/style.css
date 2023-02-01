@@ -4,7 +4,7 @@ body{
 
 header{
     background-color: #404EED;
-    width: 1366px;
+    width: 100%;
     height: 89px;
     display: flex;
     justify-content: left;
@@ -23,7 +23,7 @@ header .img{
 .escolhasDasRoupas{
     background-color: #E5E5E5;
     height: 718px;
-    width: 50%;
+    width: 683px;
     display: flex;
     flex-direction: column;
     justify-content: ;
@@ -113,7 +113,10 @@ p{
 .decoracao{
     background-color: #404EED;
     height: 758px;
-    width: 50%;
+    width: 683px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .selecionado{
@@ -179,7 +182,52 @@ h2{
     font-weight: 400;
     font-size: 24px;
     line-height: 28px;
-    text-align: center;
+    text-align: left;
     color: #232323;
+    margin-bottom: 15px;
 }
 
+.ultimosPedidos{
+    display: flex;
+}
+
+.caixa{
+    width: 200px;
+    height: 236px;
+    background: #FFFFFF;
+    border-radius: 10px;
+    margin-right: 16px;
+    position: relative;
+}
+
+.camisaPronta{
+    width: 180px;
+    height: 180px;
+    position:absolute;
+    left: 10px;
+    top: 16px;
+}
+
+.textoVendido{
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    position:absolute;
+    left: 25px;
+    top: 204px;
+}
+
+.span{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-size: 20px;
+    line-height: 23px;
+    color: #232323;
+}
+.strong{
+    font-weight: 700;
+}
+
+.nomeVendido{
+    font-weight: 400;
+}
