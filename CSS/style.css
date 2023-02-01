@@ -1,7 +1,5 @@
 body{
     width: 1366px;
-    font-family: "roboto";
-
 }
 
 header{
@@ -19,20 +17,21 @@ header .img{
 
 .conteudoPrincipal{
     display: flex;
-    height: 785px;
+    height: 758px;
 }
 
 .escolhasDasRoupas{
     background-color: #E5E5E5;
-    height: 758px;
+    height: 718px;
     width: 50%;
     display: flex;
     flex-direction: column;
     justify-content: ;
     align-items: center;
+    padding-top: 40px;
 }
 
-.escolhasDasRoupas div{
+.caixasDeSelecao{
     width: 398px;
 }
 
@@ -40,10 +39,17 @@ header .img{
     display: flex;
     flex-direction: column;
     align-items: left;
-    height: 70px;
+    height: 155px;
+    margin-bottom: 30px;
+}
+
+.nomeModificacao{
+    padding-left: 10px;
+    margin-bottom: 9px;
 }
 
 p{
+    font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
@@ -51,29 +57,57 @@ p{
     color: #232323;
 }
 
+.nomeImagem{
+    margin-top: 8px;
+}
+
+.opcoes{
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.opcao{
+    display: flex;
+    flex-direction: column;
+    width: 114px;
+    align-items: center;
+    justify-content: center;
+}
+
 .ajusteImagem{
-    position: absolute;
+    position: relative;
+    width: 110px;
 }
 
 .imagemComFundo{
     width: 80px;
     height: 80px;
-    position: relative;
-    left: 0;
-    top: 0;
+    position: absolute;
+    left: 10px;
+    top: 9px;
 }
 .fundo{
     color: #C4C4C4;
     width: 100px;
     height: 100px;
-    position: relative;
-    left: 0;
-    top: 0;
+    background-color: #C4C4C4;
+    border-radius: 100px;
+    
 }
 
-.opcoes{
-    display: flex;
-    
+.gola{
+    width: 90px;
+    height: 60px;
+    top: 15px;
+    left: 5px;
+}
+
+.tecido{
+    width: 60px;
+    height: 60px;
+    left: 20px;
+    top: 20px;
 }
 
 .decoracao{
@@ -81,3 +115,71 @@ p{
     height: 758px;
     width: 50%;
 }
+
+.selecionado{
+    border: 3px solid #404EED;
+}
+
+input{
+    width: 396px;
+    height: 40px;
+    background-color: #F2F2F2;
+    border-radius: 10px;
+    margin-top: 9px;
+    margin-bottom: 24px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    color: #232323;
+    padding-left: 15px;
+}
+
+input::placeholder{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    color: #818181;
+    padding-left: 1px;
+}
+
+button{
+    width: 396px;
+    height: 40px;
+    background: #C4C4C4;
+    border-radius: 10px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+    font-family: 'Roboto';
+    color: #FCFCFC;
+    
+}
+
+.botaoPronto{
+    background: #404EED;
+}
+
+.baixo{
+    width: 1366px;
+    height: 342px;
+    background-color: #F2F2F2;
+    padding: 30px 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+}
+
+h2{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center;
+    color: #232323;
+}
+
