@@ -2,7 +2,6 @@ let nomeUsuario = prompt("Qual o seu nome?");
 let modelo, gola, tecido, input;
 let camisaEncomendada = [];
 
-
 function desmarcacaoAnterior(seletor){
     const caixaSelecionada = document.querySelector(`${seletor} .selecionado`);
     if (caixaSelecionada !== null){
@@ -56,7 +55,7 @@ function selecionartecido(tecidoselecionada){
 
 function verificadordecompra(){
         
-    if ((modelo !== undefined) && (gola !== undefined) && (tecido !== undefined) && ((input !== undefined) && (input !== ''))){
+    if ((modelo !== undefined) && (gola !== undefined) && (tecido !== undefined) /*&& ((input !== undefined) && (input !== ''))*/){
 
         const ligar = document.querySelector('.confirmar');
         ligar.disabled = false;
@@ -69,15 +68,17 @@ function verificadordecompra(){
 }
 
 function enviarPedido(){
-    
+    input = document.querySelector("input").value;
+
     camisaEncomendada = {
         model: modelo,
         neck: gola,
         material: tecido,
-        image: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fpt.wikipedia.org%2Fwiki%2FFicheiro%3APac_Man.svg&psig=AOvVaw2ocjCTRgRjqaQ8o_8HMV24&ust=1675455158671000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCPDUrf7S9_wCFQAAAAAdAAAAABAE",
+        image: input,
         owner: nomeUsuario,
         author: nomeUsuario
-    }
+    };
+    
     console.log(camisaEncomendada)
     const promise = axios.post("https://mock-api.driven.com.br/api/v4/shirts-api/shirts", camisaEncomendada);
     promise.then((res) => {
@@ -92,20 +93,40 @@ function enviarPedido(){
 
 ///////////// fim do envio do pedido
 
-function refazerPedido(){
+function refazerPedido(refazer){
+    confirm("Deseja refazer este pedido?");
+    console.log(refazer.img)
+    if (confirm() == true) {
+        /*
+        camisaEncomendada = {
+        model: modelo,
+        neck: gola,
+        material: tecido,
+        image: refazer.document.querySelector("img"),
+        owner: nomeUsuario,
+        author: nomeUsuario
+    };
+        
+         
 
+        get para pegar os dados
+        se funcionar: localizar o pedido selecionado
+        pegar o id do pedido selecionado
+        jogar o pedido em uma array
+        post para enviar o pedido
+        */
+      }
 }
 
 function renderizarPedidoFeitos(){
 
-    const promise = axios.get("https://mock-api.driven.com.br/api/v4/shirts-api/shirts")
+    const promise = axios.get("https://mock-api.driven.com.br/api/v4/shirts-api/shirts");
     promise.then((res) => {
-        console.log(res.data)
         let pedidosFeitos = document.querySelector(".ultimosPedidos");
         
         for(let i = 0; i < res.data.length ; i++){
             pedidosFeitos.innerHTML += `
-                    <div onclick="refazerPedido()" class="caixa">
+                    <div onclick="refazerPedido(this)" class="caixa">
                         <img class="camisaPronta" src="${res.data[i].image}">
                         <div class="textoVendido">
                             <span class="strong">Criador:&nbsp;</span>
@@ -116,7 +137,7 @@ function renderizarPedidoFeitos(){
         }
     })
     promise.catch((error) => {
-        console.log("erro na renderização dos últimos pedidos")
+        console.log("Erro na renderização dos últimos pedidos")
     })
     
 }
