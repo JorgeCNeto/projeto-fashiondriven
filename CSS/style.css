@@ -142,6 +142,7 @@ input{
     line-height: 16px;
     color: #232323;
     padding-left: 15px;
+    box-sizing: border-box;
 }
 
 input::placeholder{
@@ -179,6 +180,9 @@ button{
     display: flex;
     flex-direction: column;
     align-items: left;
+    flex-flow: row nowrap;
+    overflow: hidden;
+    overflow-x: scroll;
 }
 
 h2{
