@@ -35,7 +35,7 @@ header .img{
     width: 398px;
 }
 
-.modelo{
+.modelos, .golas, .tecidos{
     display: flex;
     flex-direction: column;
     align-items: left;
@@ -73,6 +73,7 @@ p{
     width: 114px;
     align-items: center;
     justify-content: center;
+    
 }
 
 .ajusteImagem{
@@ -80,13 +81,6 @@ p{
     width: 110px;
 }
 
-.imagemComFundo{
-    width: 80px;
-    height: 80px;
-    position: absolute;
-    left: 10px;
-    top: 9px;
-}
 .fundo{
     color: #C4C4C4;
     width: 100px;
@@ -94,6 +88,17 @@ p{
     background-color: #C4C4C4;
     border-radius: 100px;
     
+}
+
+.imagemComFundo{
+    position: absolute;
+}
+
+.modelo{
+    width: 80px;
+    height: 80px;
+    left: 10px;
+    top: 9px;
 }
 
 .gola{

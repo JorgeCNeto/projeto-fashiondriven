@@ -22,50 +22,50 @@
     <div class="conteudoPrincipal">
         <div class="escolhasDasRoupas">
             <div class="caixasDeSelecao">
-                <div class="modelo">
+                <div class="modelos">
                     <p class="nomeModificacao">Escolha o modelo</p>
                     <div class="opcoes">
-                        <div class="opcao">
+                        <div onclick="selecionarmodelo(this)" class="opcao">
                             <div class="ajusteImagem">
                                 <ion-icon  class="fundo" name="ellipse"></ion-icon>
-                                <img class="imagemComFundo" src="Imagens/tshirt.png">
+                                <img class="imagemComFundo modelo" src="Imagens/tshirt.png">
                             </div>
                             <p class="nomeImagem">T-shirt</p>
                         </div>
-                        <div class="opcao">
+                        <div onclick="selecionarmodelo(this)" class="opcao">
                             <div class="ajusteImagem">
                                 <ion-icon  class="fundo" name="ellipse"></ion-icon>
-                                <img class="imagemComFundo" src="Imagens/Camiseta.png">
+                                <img class="imagemComFundo modelo" src="Imagens/Camiseta.png">
                             </div>
                             <p class="nomeImagem">Camiseta</p>
                         </div>
-                        <div class="opcao">
+                        <div onclick="selecionarmodelo(this)" class="opcao">
                             <div class="ajusteImagem">
                                 <ion-icon  class="fundo" name="ellipse"></ion-icon>
-                                <img class="imagemComFundo" src="Imagens/Mangalonga.png">
+                                <img class="imagemComFundo modelo" src="Imagens/Mangalonga.png">
                             </div>
                             <p class="nomeImagem">Manga Longa</p>
                         </div>
                     </div>
                 </div>
-                <div class="modelo">
+                <div class="golas">
                     <p class="nomeModificacao">Escolha a gola</p>
                     <div class="opcoes">
-                        <div class="opcao">
+                        <div onclick="selecionargola(this)" class="opcao">
                             <div class="ajusteImagem">
                                 <ion-icon  class="fundo" name="ellipse"></ion-icon>
                                 <img class="imagemComFundo gola" src="Imagens/GolaV.png">
                             </div>
                             <p class="nomeImagem">Gola V</p>
                         </div>
-                        <div class="opcao">
+                        <div onclick="selecionargola(this)" class="opcao">
                             <div class="ajusteImagem">
                                 <ion-icon  class="fundo" name="ellipse"></ion-icon>
                                 <img class="imagemComFundo gola" src="Imagens/GolaRedonda.png">
                             </div>
                             <p class="nomeImagem">Gola Redonda</p>
                         </div>
-                        <div class="opcao">
+                        <div onclick="selecionargola(this)" class="opcao">
                             <div class="ajusteImagem">
                                 <ion-icon  class="fundo" name="ellipse"></ion-icon>
                                 <img class="imagemComFundo gola" src="Imagens/GolaPolo.png">
@@ -74,24 +74,24 @@
                         </div>
                     </div>
                 </div>
-                <div class="modelo">
+                <div class="tecidos">
                     <p class="nomeModificacao">Escolha o tecido</p>
                     <div class="opcoes">
-                        <div class="opcao">
+                        <div onclick="selecionartecido(this)" class="opcao">
                             <div class="ajusteImagem">
                                 <ion-icon  class="fundo" name="ellipse"></ion-icon>
                                 <img class="imagemComFundo tecido" src="Imagens/Seda.png">
                             </div>
                             <p class="nomeImagem">Seda</p>
                         </div>
-                        <div class="opcao">
+                        <div onclick="selecionartecido(this)" class="opcao">
                             <div class="ajusteImagem">
                                 <ion-icon  class="fundo" name="ellipse"></ion-icon>
                                 <img class="imagemComFundo tecido" src="Imagens/Algodão.png">
                             </div>
                             <p class="nomeImagem">Algodão</p>
                         </div>
-                        <div class="opcao">
+                        <div onclick="selecionartecido(this)" class="opcao">
                             <div class="ajusteImagem">
                                 <ion-icon  class="fundo" name="ellipse"></ion-icon>
                                 <img class="imagemComFundo tecido" src="Imagens/Poliester.png">
@@ -102,7 +102,7 @@
                 </div>
                 <p>Imagem de referência</p>
                 <input placeholder="Insira o link">
-                <button disabled>Confirmar pedido</button>
+                <button class="confirmar" disabled>Confirmar pedido</button>
             </div>
         </div>
         <div class="decoracao">
