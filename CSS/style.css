@@ -4,7 +4,6 @@ body{
 
 header{
     background-color: #404EED;
-    width: 100%;
     height: 89px;
     display: flex;
     justify-content: left;
@@ -17,6 +16,7 @@ header .img{
 
 .conteudoPrincipal{
     display: flex;
+    width: 100%;
     height: 758px;
 }
 
@@ -173,7 +173,6 @@ button{
 }
 
 .baixo{
-    width: 1366px;
     height: 342px;
     background-color: #F2F2F2;
     padding: 30px 120px;
