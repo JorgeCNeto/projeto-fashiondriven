@@ -55,10 +55,11 @@ function selecionartecido(tecidoselecionada){
 
 function verificadordecompra(){
     const validate = /(https?:\/\/.*\.(?:png|jpg))/i;
-    input = document.querySelector('.typeText');
+    input = document.querySelector('.input');
     let linkValido = validate.test(input.value);
+    console.log(linkValido)
         
-    if ((modelo !== undefined) && (gola !== undefined) && (tecido !== undefined) /*&& (linkValido === true)*/){
+    if ((modelo !== undefined) && (gola !== undefined) && (tecido !== undefined) && (linkValido === true)){
 
         const ligar = document.querySelector('.confirmar');
         ligar.disabled = false;
