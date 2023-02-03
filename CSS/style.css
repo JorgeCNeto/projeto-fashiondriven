@@ -239,3 +239,7 @@ h2{
 .nomeVendido{
     font-weight: 400;
 }
+
+.escondido{
+    display: none;
+}

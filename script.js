@@ -1,5 +1,5 @@
 let nomeUsuario = prompt("Qual o seu nome?");
-let modelo, gola, tecido, input;
+let modelo, gola, tecido, input, image;
 let camisaEncomendada = [];
 
 function desmarcacaoAnterior(seletor){
@@ -54,8 +54,11 @@ function selecionartecido(tecidoselecionada){
 
 
 function verificadordecompra(){
+    const validate = /(https?:\/\/.*\.(?:png|jpg))/i;
+    input = document.querySelector('.typeText');
+    let linkValido = validate.test(input.value);
         
-    if ((modelo !== undefined) && (gola !== undefined) && (tecido !== undefined) /*&& ((input !== undefined) && (input !== ''))*/){
+    if ((modelo !== undefined) && (gola !== undefined) && (tecido !== undefined) /*&& (linkValido === true)*/){
 
         const ligar = document.querySelector('.confirmar');
         ligar.disabled = false;
@@ -67,8 +70,14 @@ function verificadordecompra(){
     }
 }
 
-function enviarPedido(){
-    input = document.querySelector("input").value;
+function enviarPedido(reenvio){
+    
+    if(reenvio){
+        input = image;
+    } else {
+        input = document.querySelector("input").value;
+    }
+   
 
     camisaEncomendada = {
         model: modelo,
@@ -93,28 +102,17 @@ function enviarPedido(){
 
 ///////////// fim do envio do pedido
 
-function refazerPedido(refazer){
+function refazerPedido(elemento){
     confirm("Deseja refazer este pedido?");
-    console.log(refazer.img)
+    console.log(elemento)
     if (confirm() == true) {
-        /*
-        camisaEncomendada = {
-        model: modelo,
-        neck: gola,
-        material: tecido,
-        image: refazer.document.querySelector("img"),
-        owner: nomeUsuario,
-        author: nomeUsuario
-    };
+        modelo = elemento.querySelector(".model").innerHTML;
+        gola = elemento.querySelector(".neck").innerHTML;
+        tecido = elemento.querySelector(".material").innerHTML;
+        owner = elemento.querySelector(".nomeVendido").innerHTML;
+        image = elemento.querySelector(".camisaPronta").src;
         
-         
-
-        get para pegar os dados
-        se funcionar: localizar o pedido selecionado
-        pegar o id do pedido selecionado
-        jogar o pedido em uma array
-        post para enviar o pedido
-        */
+        enviarPedido(true);
       }
 }
 
@@ -131,11 +129,17 @@ function renderizarPedidoFeitos(){
                         <div class="textoVendido">
                             <span class="strong">Criador:&nbsp;</span>
                             <span class="nomeVendido">${res.data[i].owner}</span>
+                            <p class="material escondido">${res.data[i].material}</p>
+                            <p class="model escondido">${res.data[i].model}</p>
+                            <p class="neck escondido">${res.data[i].neck}</p>
+                            <p class="id escondido">${res.data[i].id}</p>
                         </div>
                     </div>
             `
         }
+       
     })
+    
     promise.catch((error) => {
         console.log("Erro na renderização dos últimos pedidos")
     })
